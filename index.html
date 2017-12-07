@@ -103,6 +103,35 @@
     <h3 class="text-center">TOUR DATES</h3>
     <p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p>
 
+head>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
+    </script>
+  </body>
+
     <ul class="list-group">
       <li class="list-group-item">September Sold Out!</li>
       <li class="list-group-item">October Sold Out!</li>
