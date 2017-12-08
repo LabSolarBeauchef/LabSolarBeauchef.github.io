@@ -137,35 +137,5 @@
 <footer class="container-fluid text-center">
   <p>Página en versión beta. Cualquier comentario o sugerencia es bienvenida</p>
 </footer>
-<div class="container-fluid">
-<body>
-<script>
-	    $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
-    // Create the chart
-    Highcharts.stockChart('container3', {
-
-
-        rangeSelector: {
-            selected: 1
-        },
-
-        title: {
-            text: 'AAPL Stock Price'
-        },
-
-        series: [{
-            name: 'AAPL',
-            data: data,
-            tooltip: {
-                valueDecimals: 2
-            }
-        }]
-    });
-});
-</script>
-<div id="container3" style="height: 400px; min-width: 310px"></div>
-</body>
-</div>
-
 </body>
 </html>
