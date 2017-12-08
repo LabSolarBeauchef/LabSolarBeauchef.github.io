@@ -97,12 +97,35 @@ $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.jso
       <p>Lorem ipsum...</p>
     </div> -->
     <div class="col-sm-2 sidenav">
+<<<<<<< HEAD
 	  <div class="well">
         <p>ADS</p>
       </div>
       <div class="well">
         <p>ADS</p>
       </div>
+=======
+	  <body>
+    <h3>Beauchef 851, Santiago</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var here = {lat: -33.457813, lng: -70.6644018};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: here
+        });
+        var marker = new google.maps.Marker({
+          position: here,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
+    </script>
+  </body>
+>>>>>>> parent of 26af9d0... 56
     </div>
 </div>
 <div class="bg-1">
