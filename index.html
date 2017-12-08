@@ -1,145 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Página de prueba</title>
+  <title>Laboratorio de Medición Solar, DIMEC UChile</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="prototipo_estilo.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+ 
+  
 </head>
 <body>
-<!-- este es el encabezado -->
- <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
-  <!-- <!-- Indicators --> -->
-  <!-- <ol class="carousel-indicators"> -->
-    <!-- <li data-target="#myCarousel" data-slide-to="0" class="active"></li> -->
-    <!-- <li data-target="#myCarousel" data-slide-to="1"></li> -->
-    <!-- <li data-target="#myCarousel" data-slide-to="2"></li> -->
-  <!-- </ol> -->
+<script type='text/javascript'>//<![CDATA[
 
-  <!-- Wrapper for slides -->
-   <div class="carousel-inner" role="listbox">
+
+$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+    // Create the chart
+    Highcharts.stockChart('container2', {
+
+
+        rangeSelector: {
+            selected: 1
+        },
+
+        title: {
+            text: 'AAPL Stock Price'
+        },
+
+        series: [{
+            name: 'AAPL',
+            data: data,
+            tooltip: {
+                valueDecimals: 2
+            }
+        }]
+    });
+});
+
+
+//]]> 
+
+</script>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Equipos</a></li>
+        <li><a href="#">Datos de medición</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="cabecera.jpg" alt="Medidor de Radiación" style="width:1920px;height:720px;">
-      <div class="carousel-caption">
+      <div class="carousel-caption" style="">
         <h3>Estación de medición de radiación solar</h3>
         <p>Facultad de Ciencias Físicas y Matemáticas</p>
 		<p>Universidad de Chile</p>
       </div>
+    </div> 
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="http://ingenieria.uchile.cl" target="_blank"> Facultad de Ingeniería</a></p>
+      <p><a href="http://dimec.uchile.cl/web/" target="_blank">Departamento de Ingeniería Mecánica</a></p>
+      <p><a href="http://ernc.dgf.uchile.cl:48080/inicio" target="_blank">Explorador Solar</a></p>
     </div>
-
-   <!--  <div class="item">
-      <img src="foto4.jpg" alt="Chicago" style="width:1200px;height:720px;">
-      <div class="carousel-caption">
-        <h3>Chicago</h3>
-        <p>Thank you, Chicago - A night we won't forget.</p>
+	<div class="col-sm-8" id="container2" style="height: 400px; min-width: 310px"></div>
+    <!-- <div class="col-sm-8 text-left"> 
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+      <h3>Test</h3>
+      <p>Lorem ipsum...</p>
+    </div> -->
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
       </div>
     </div>
-
-    <div class="item">
-      <img src="foto6.jpg" alt="Los Angeles" style="width:1200px;height:720px;">
-      <div class="carousel-caption">
-        <h3>LA</h3>
-        <p>Even though the traffic was a mess, we had the best time.</p>
-      </div>
-    </div>
-  </div> -->
-  <!-- Left and right controls -->
-  <!-- <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>  -->
-<!-- acá comienza el diseño de la página -->
-<div class="container text-center">
-  <h3>THE BAND</h3>
-  <p><em>We love music!</em></p>
-  <p>We have created a fictional band website. Lorem ipsum..</p>
-  <p> Estación ULA, al Diego le gusta la tULA</p>
-  <br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p><strong>Foto 1</strong></p><br>
-	  <a href="#demo" data-toggle="collapse">
-      <img src="foto1.jpg" alt="Random Name" class="img-circle person" style="width:200px;height:300px;">
-	  </a>
-	  <div id="demo" class="collapse">
-      <p>Guitarist and Lead Vocalist</p>
-      <p>Loves long walks on the beach</p>
-      <p>Member since 1988</p>
-    </div>
-    </div>
-    <div class="col-sm-4">
-	  <p><strong>Foto 3</strong></p><br>
-      <a href="#demo2" data-toggle="collapse">
-      <img src="foto3.jpg" alt="Random Name" class="img-circle person" style="width:200px;height:300px;">
-	  </a>
-	  <div id="demo2" class="collapse">
-        <p>Drummer</p>
-        <p>Loves drummin'</p>
-        <p>Member since 1988</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-	  <p><strong>Foto 5</strong></p><br>
-      <a href="#demo3" data-toggle="collapse">
-      <img src="foto5.jpg" alt="Random Name" class="img-circle person" style="width:200px;height:300px;">
-	  </a>
-	  <div id="demo3" class="collapse">
-        <p>Drummer</p>
-        <p>Loves drummin'</p>
-        <p>Member since 1988</p>
-      </div>
-    </div>
-  </div>
-  <div class="bg-1">
-   <div class="container">
-    <h3 class="text-center">TOUR DATES</h3>
-    <p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p>
-
-    <style>
-      #map {
-        height: 400px;
-        width: 97%;
-       }
-    </style>
-  </head>
-  <body>
-    <h3>Beauchef 851, Santiago</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var here = {lat: -33.457813, lng: -70.6644018};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: here
-        });
-        var marker = new google.maps.Marker({
-          position: here,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
-    </script>
-  </body>
-
-    <ul class="list-group">
-	{width: 97%;}
-      <li class="list-group-item">September Sold Out!</li>{width: 97%;}
-      <li class="list-group-item">October Sold Out!</li>{width: 97%;}
-      <li class="list-group-item">November 3</li>{width: 97%;}
-    </ul>
-   </div>
   </div>
 </div>
+<footer class="container-fluid text-center">
+  <p>Página en versión beta. Cualquier comentario o sugerencia es bienvenida</p>
+</footer>
+
 </body>
 </html>
