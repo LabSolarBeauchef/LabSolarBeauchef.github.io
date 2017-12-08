@@ -139,6 +139,33 @@ $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.jso
     <h3 class="text-center">TOUR DATES</h3>
     <p class="text-center">Lorem ipsum we'll play you some music.<br> Remember to book your tickets!</p>
 
+  <body>
+  <script>
+#map {
+        height: 400px;
+        width: 100%;
+       }
+</script>
+    <h3>Beauchef 851, Santiago</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var here = {lat: -33.457813, lng: -70.6644018};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: here
+        });
+        var marker = new google.maps.Marker({
+          position: here,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
+    </script>
+  </body>
+
 
     <ul class="list-group">
       <li class="list-group-item">September Sold Out!</li>
