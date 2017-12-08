@@ -105,33 +105,6 @@ $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.jso
         <p>ADS</p>
       </div>
 
-  <body>
-  <script>
-#map {
-        height: 50px;
-        width: 5%;
-       }
-</script>
-    <h3>Beauchef 851, Santiago</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var here = {lat: -33.457813, lng: -70.6644018};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 17,
-          center: here
-        });
-        var marker = new google.maps.Marker({
-          position: here,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
-    </script>
-  </body>
-
     </div>
 </div>
 <div class="bg-1">
@@ -143,18 +116,18 @@ $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.jso
     <style>
       #map {
         height: 100px;
-        width: 10%;
+        width: 100%;
        }
     </style>
 </head>
   <body>
-    <h3>My Google Maps Demo</h3>
+    <h2>Beauchef 851, Santiago</h2>
     <div id="map"></div>
     <script>
       function initMap() {
         var uluru = {lat: -33.457813, lng: -70.6644018};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
+          zoom: 17,
           center: uluru
         });
         var marker = new google.maps.Marker({
