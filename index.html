@@ -142,17 +142,17 @@ $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.jso
 <head>
     <style>
       #map {
-        height: 400px;
-        width: 100%;
+        height: 100px;
+        width: 10%;
        }
     </style>
-  </head>
+</head>
   <body>
     <h3>My Google Maps Demo</h3>
     <div id="map"></div>
     <script>
       function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
+        var uluru = {lat: -33.457813, lng: -70.6644018};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
           center: uluru
@@ -167,6 +167,7 @@ $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.jso
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
     </script>
   </body>
+
 
     <ul class="list-group">
       <li class="list-group-item">September Sold Out!</li>
