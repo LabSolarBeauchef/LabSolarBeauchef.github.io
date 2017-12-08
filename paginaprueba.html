@@ -18,13 +18,10 @@
   
 </head>
 <body>
-
-<script type='text/javascript'>//<![CDATA[
-
-
-$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+<script>
+	    $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
     // Create the chart
-    Highcharts.stockChart('container2', {
+    Highcharts.stockChart('container3', {
 
 
         rangeSelector: {
@@ -44,11 +41,8 @@ $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.jso
         }]
     });
 });
-
-
-//]]> 
-
 </script>
+
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -161,6 +155,6 @@ $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.jso
 <footer class="container-fluid text-center">
   <p>Página en versión beta. Cualquier comentario o sugerencia es bienvenida</p>
 </footer>
-
+<div id="container3" style="height: 400px; min-width: 310px"></div>
 </body>
 </html>
