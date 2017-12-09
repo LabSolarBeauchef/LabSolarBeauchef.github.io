@@ -49,6 +49,9 @@ with open(nombre + '.csv', 'w') as csvfile:
 ####
 
 
+
+
+
 ########ES UN VERDADERO EJEMPLO DE COMO HACER UN .CSV ## pajeramente xd
 ###with open('names.csv', 'w') as csvfile:
 ###    fieldnames = ['first_name', 'last_name']
@@ -58,3 +61,18 @@ with open(nombre + '.csv', 'w') as csvfile:
 ###    writer.writerow({'first_name': 'Baked', 'last_name': 'Beans'})
 ###    writer.writerow({'first_name': 'Lovely', 'last_name': 'Spam'})
 ###    writer.writerow({'first_name': 'Wonderful', 'last_name': 'Spam'})
+
+
+estructura3 = estructura1['Horas']
+print '-------------------'
+lista2 =estructura3[0][0][0][0][0][0]
+
+print '-------------------'
+for j in range(18):
+    nombre= str(lista2[2][j]).replace(" ", "")
+    with open(nombre + '.csv', 'w') as csvfile:
+        fieldnames = ['Fechas', nombre ]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for i in range(len(lista2[0])): ## LEN de todos los datos de fechas
+            writer.writerow({'Fechas': lista2[0][i][0][0], nombre : lista2[1][i][j]})
