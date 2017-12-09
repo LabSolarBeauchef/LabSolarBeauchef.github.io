@@ -60,6 +60,7 @@ padding: 0 !important;
 .noMargin {
 margin: 0 !important;
 }
-.fotoperfil{
-	width=50%
+.fotoperfil img {
+	width: 50%;
+	margin: auto;
 }
