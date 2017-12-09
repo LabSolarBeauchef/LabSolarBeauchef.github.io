@@ -24,10 +24,10 @@ lista=estructura2[0][0][0][0][0][0][0][0][0]
 ##lista[8] = RH
 ##lista[9] = Slr_Wm2_Avg (Esta lleno de NAN eso)
 ##lista[10] = total_flu_langl... (Esta lleno de NAN eso)
-##lista[11] =
-##lista[12] =
-##lista[13] =
-##lista[14] =
+##lista[11] = Rain_mm_Tot
+##lista[12] = WS_ms_S_WVT
+##lista[13] = WindDir_d1_WVT
+##lista[14] = WindDir_SD1_WVT
 
 #### BattV_min  
 nombre='BattV_Min'
