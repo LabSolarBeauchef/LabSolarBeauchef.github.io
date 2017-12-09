@@ -38,7 +38,15 @@ with open(nombre + '.csv', 'w') as csvfile:
     for i in range(len(lista[0])): ## LEN de todos los datos de fechas
         writer.writerow({'Fechas': lista[0][i][0][0], nombre : lista[2][i][0]})
 ####
-
+#### PTemp_C_Avg 
+nombre='PTemp_C_Avg'
+with open(nombre + '.csv', 'w') as csvfile:
+    fieldnames = ['Fechas', nombre ]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    for i in range(len(lista[0])): ## LEN de todos los datos de fechas
+        writer.writerow({'Fechas': lista[0][i][0][0], nombre : lista[3][i][0]})
+####
 
 
 ########ES UN VERDADERO EJEMPLO DE COMO HACER UN .CSV ## pajeramente xd
