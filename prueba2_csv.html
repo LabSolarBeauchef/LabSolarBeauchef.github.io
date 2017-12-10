@@ -13,18 +13,23 @@
 		
 		<!-- 2. Add the JavaScript to initialize the chart on document ready -->
 		<script type="text/javascript">
-		$(function () {
-            $.get("csv/Difusa_Avg.csv", function (csv) {
-               $('#container').highcharts('StockChart', {
-                  data: {
-                     complete: function(o) {
-                         o.series[0].data.reverse();
-                   },
-                  csv: csv
-              }
-          });
-       });
-   });
+		
+		$(document).ready(function () {
+    
+        $('#container').highcharts('StockChart', {
+            xAxis: {
+                type: 'datetime'
+            },
+            title: {
+                text: 'Index'
+            },
+            data: {
+                csv: document.getElementById('csv/Difusa_Avg.csv').innerHTML
+            }
+            
+        });
+
+});
 		</script>
 		
 	</head>
