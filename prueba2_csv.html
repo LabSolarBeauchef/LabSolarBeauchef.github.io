@@ -10,6 +10,10 @@
         <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
         <script src="https://code.highcharts.com/modules/data.js"></script>
 		
+		<pre id="data.csv" style="display: none">Date,Value
+01-05-2014,155
+02-06-2014,156
+03-11-2014,157</pre>
 		
 		<!-- 2. Add the JavaScript to initialize the chart on document ready -->
 		<script type="text/javascript">
@@ -24,7 +28,7 @@
                 text: 'Index'
             },
             data: {
-                csv: document.getElementById('csv/Difusa_Avg.csv').innerHTML
+                csv: document.getElementById('data.csv').innerHTML
             }
             
         });
