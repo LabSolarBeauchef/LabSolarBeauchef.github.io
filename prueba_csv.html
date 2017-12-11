@@ -7,7 +7,7 @@
 		
 		<!-- 1. Add these JavaScript inclusions in the head of your page -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+		<script type="text/javascript" src="https://code.highcharts.com/stock/highstock.js"></script>
 		<script type="text/javascript" src="https://code.highcharts.com/modules/data.js"></script>
 		
 		
@@ -16,32 +16,20 @@
 		$(document).ready(function() {
 			
 
-			
-			
-			/*
-			 Load the data from the CSV file. This is the contents of the file:
-			 
-				Apples,Pears,Oranges,Bananas,Plums
-				John,8,4,6,5
-				Jane,3,4,2,3
-				Joe,86,76,79,77
-				Janet,3,16,13,15
-				
-			 */ 
 			$.get('./csv/Difusa_Avg.csv', function(csv) {
-			    $('#container').highcharts({
+			    Highcharts.stockChart('container', {
 			        chart: {
-			        	type: 'column'
+			        	type: 'line'
 			        },
 			        data: {
 			            csv: csv
 			        },
 			        title: {
-						text: 'Fruit Consumption'
+						text: 'Potencia Producida - Paneles Policristalinos 1,2kW'
 					},
 					yAxis: {
 						title: {
-							text: 'Units'
+							text: 'Watts'
 						}
 					}
 			    });
