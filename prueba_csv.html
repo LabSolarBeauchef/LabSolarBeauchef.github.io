@@ -22,6 +22,8 @@
 			        	type: 'line'
 			        },
 			        data: {
+					complete: function(o) {
+                    o.series[0].data.reverse();},
 			            csv: csv
 			        },
 			        title: {
