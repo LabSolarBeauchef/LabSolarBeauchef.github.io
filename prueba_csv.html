@@ -6,9 +6,9 @@
 		
 		
 		<!-- 1. Add these JavaScript inclusions in the head of your page -->
-		<Script src = "jquery.js"> </script>
-        <Script src = "highstock.js"> </script>
-        <Script src = "data.js"> </script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="https://code.highcharts.com/stock/highstock.js"></script>
+		<script type="text/javascript" src="https://code.highcharts.com/modules/data.js"></script>
 		
 		
 		<!-- 2. Add the JavaScript to initialize the chart on document ready -->
@@ -16,14 +16,12 @@
 		$(document).ready(function() {
 			
 
-			$.get('./csv/Difusa_Avg.csv', function(csv) {
+			$.get('./csv/poli.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
 			        },
 			        data: {
-					complete: function(o) {
-                    o.series[0].data.reverse();},
 			            csv: csv
 			        },
 			        title: {
