@@ -13,7 +13,6 @@ estructura2 = estructura1['Minutos']
 ## ACA ME METO EN LISTAS  y esas cosas
 lista=estructura2[0][0][0][0][0][0][0][0][0]
 lista3=estructura2[0][0][0][0][1][0][0][0][0]
-print lista3
 ##lista[0] = TIMESTAMP (Son las fechas) 
 ##lista[1] = RECORS    (es el numero de caption tomados)
 ##lista[2] = BattV_min
@@ -29,16 +28,26 @@ print lista3
 ##lista[12] = WS_ms_S_WVT
 ##lista[13] = WindDir_d1_WVT
 ##lista[14] = WindDir_SD1_WVT
-nombres=['Fechas','RECORS','BattV_min','PTemp_C_Avg','Pres_mbar_Avg','Temp_C_Avg','Temp_C_Max','Temp_C_Min','RH','Slr_Wm2_Avg','Total_flu','Rain_mm_Tot','WS_ms_S_WVT','WindDir_d1_WVT','WindDir_d1_WVT','WindDir_SD1_WVT']
+nombres=['Fechas','RECORS','BattV_min','PTemp_C_Avg','Pres_mbar_Avg','Temp_C_Avg','Temp_C_Max','Temp_C_Min','RH','Slr_Wm2_Avg','Total_flu','Rain_mm_Tot','WS_ms_S_WVT','WindDir_d1_WVT','WindDir_SD1_WVT']
 #### BattV_min  
-for j in range(len(nombres)):
+for j in range(2,len(nombres)):
     nombre=  nombres[j] #str(lista2[2][j]).replace(" ", "")
     with open('./csv/minutos/'+nombre +'_minutos'+'.csv', 'w') as csvfile:
         fieldnames = ['Fechas', nombre ]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for i in range(len(lista[0])): ## LEN de todos los datos de fechas
-            writer.writerow({'Fechas': lista[0][i][0][0],  nombres[j] : lista[j][i][0]})
+            writer.writerow({'Fechas': lista[0][i][0][0],  nombres[j] : str(lista[j][i][0]).replace("[u'NAN']", "0")})
+            
+nombre='Datos_temperatura'
+with open('./csv/minutos/' + nombre +'_minutos'+'.csv', 'w') as csvfile:
+    fieldnames = ['Fechas', nombres[4],nombres[5],nombres[6] ]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    for i in range(len(lista[0])): ## LEN de todos los datos de fechas
+           writer.writerow({'Fechas': lista[0][i][0][0],  nombres[4]: lista[4][i][0] ,nombres[5]: lista[5][i][0],nombres[6]: lista[6][i][0] })
+
+
 '''
 nombre='BattV_Min'
 with open('./csv/minutos/'+nombre +'_minutos'+'.csv', 'w') as csvfile:
