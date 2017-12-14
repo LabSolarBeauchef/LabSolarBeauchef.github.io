@@ -12,8 +12,7 @@ estructura2 = estructura1['Minutos']
 
 ## ACA ME METO EN LISTAS  y esas cosas
 lista=estructura2[0][0][0][0][0][0][0][0][0]
-
-lista3=estructura2[0][0][0][0][0][0][0][0]
+lista3=estructura2[0][0][0][0][1][0][0][0][0]
 print lista3
 ##lista[0] = TIMESTAMP (Son las fechas) 
 ##lista[1] = RECORS    (es el numero de caption tomados)
@@ -30,21 +29,27 @@ print lista3
 ##lista[12] = WS_ms_S_WVT
 ##lista[13] = WindDir_d1_WVT
 ##lista[14] = WindDir_SD1_WVT
-
+nombres=['Fechas','RECORS','BattV_min','PTemp_C_Avg','Pres_mbar_Avg','Temp_C_Avg','Temp_C_Max','Temp_C_Min','RH','Slr_Wm2_Avg','Total_flu','Rain_mm_Tot','WS_ms_S_WVT','WindDir_d1_WVT','WindDir_d1_WVT','WindDir_SD1_WVT']
 #### BattV_min  
-
+for j in range(len(nombres)):
+    nombre=  nombres[j] #str(lista2[2][j]).replace(" ", "")
+    with open('./csv/minutos/'+nombre +'_minutos'+'.csv', 'w') as csvfile:
+        fieldnames = ['Fechas', nombre ]
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        for i in range(len(lista[0])): ## LEN de todos los datos de fechas
+            writer.writerow({'Fechas': lista[0][i][0][0],  nombres[j] : lista[j][i][0]})
 '''
 nombre='BattV_Min'
-with open(nombre + 'minutos'+ '.csv', 'w') as csvfile:
+with open('./csv/minutos/'+nombre +'_minutos'+'.csv', 'w') as csvfile:
     fieldnames = ['Fechas', nombre ]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     for i in range(len(lista[0])): ## LEN de todos los datos de fechas
-        writer.writerow({'Fechas': lista[0][i][0][0], nombre : lista[2][i][0]})
-'''
+        writer.writerow({'Fechas': str(lista[0][i][0]).replace("']", "").replace("[u'", ""), nombre : lista[2][i][0]})
 ####
-#### PTemp_C_Avg 
-'''
+#### PTemp_C_Avg [u'2017-05-10 19:40:00
+
 nombre='PTemp_C_Avg'
 with open(nombre + 'minutos'+ '.csv', 'w') as csvfile:
     fieldnames = ['Fechas', nombre ]
