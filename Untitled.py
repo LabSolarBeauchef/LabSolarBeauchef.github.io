@@ -41,34 +41,14 @@ for j in range(2,len(nombres)):
             
 nombre='Datos_temperatura'
 with open('./csv/minutos/' + nombre +'_minutos'+'.csv', 'w') as csvfile:
-    fieldnames = ['Fechas', nombres[4],nombres[5],nombres[6] ]
+    fieldnames = ['Fechas', nombres[5],nombres[6],nombres[7] ]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     for i in range(len(lista[0])): ## LEN de todos los datos de fechas
-           writer.writerow({'Fechas': lista[0][i][0][0],  nombres[4]: lista[4][i][0] ,nombres[5]: lista[5][i][0],nombres[6]: lista[6][i][0] })
+           writer.writerow({'Fechas': lista[0][i][0][0],  nombres[5]: lista[5][i][0] ,nombres[6]: lista[6][i][0],nombres[7]: lista[7][i][0] })
 
 
-'''
-nombre='BattV_Min'
-with open('./csv/minutos/'+nombre +'_minutos'+'.csv', 'w') as csvfile:
-    fieldnames = ['Fechas', nombre ]
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    writer.writeheader()
-    for i in range(len(lista[0])): ## LEN de todos los datos de fechas
-        writer.writerow({'Fechas': str(lista[0][i][0]).replace("']", "").replace("[u'", ""), nombre : lista[2][i][0]})
-####
-#### PTemp_C_Avg [u'2017-05-10 19:40:00
 
-nombre='PTemp_C_Avg'
-with open(nombre + 'minutos'+ '.csv', 'w') as csvfile:
-    fieldnames = ['Fechas', nombre ]
-    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    writer.writeheader()
-    for i in range(len(lista[0])): ## LEN de todos los datos de fechas
-        writer.writerow({'Fechas': lista[0][i][0][0], nombre : lista[3][i][0]})
-'''
-############################ #### #### #### 
-'''
 print '-------- Imprimir por hora-----------'
 estructura3 = estructura1['Horas']
 lista2 =estructura3[0][0][0][0][0][0]
@@ -142,6 +122,3 @@ with open('./csv/dias/' + nombre +'_dias'+'.csv', 'w') as csvfile:
     writer.writeheader()
     for i in range(len(lista2[0])): ## LEN de todos los datos de fechas
         writer.writerow({'Fechas': lista2[0][i][0][0],str(lista2[2][0]).replace(" ", "") : lista2[1][i][0] ,str(lista2[2][1]).replace(" ", "") : lista2[1][i][1] ,str(lista2[2][2]).replace(" ", "") : lista2[1][i][2] ,str(lista2[2][3]).replace(" ", "") : lista2[1][i][3] ,str(lista2[2][4]).replace(" ", "") : lista2[1][i][4] ,str(lista2[2][5]).replace(" ", "") : lista2[1][i][5] ,str(lista2[2][6]).replace(" ", "") : lista2[1][i][6] ,str(lista2[2][7]).replace(" ", "") : lista2[1][i][7] ,str(lista2[2][8]).replace(" ", "") : lista2[1][i][8] ,str(lista2[2][9]).replace(" ", "") : lista2[1][i][9] ,str(lista2[2][10]).replace(" ", "") : lista2[1][i][10] ,str(lista2[2][11]).replace(" ", "") : lista2[1][i][11] ,str(lista2[2][12]).replace(" ", "") : lista2[1][i][12] ,str(lista2[2][13]).replace(" ", "") : lista2[1][i][13] ,str(lista2[2][14]).replace(" ", "") : lista2[1][i][14] ,str(lista2[2][15]).replace(" ", "") : lista2[1][i][15] ,str(lista2[2][16]).replace(" ", "") : lista2[1][i][16] ,str(lista2[2][17]).replace(" ", "") : lista2[1][i][17] ,str(lista2[2][18]).replace(" ", "")  : lista2[1][i][18]})
-
-
-'''
