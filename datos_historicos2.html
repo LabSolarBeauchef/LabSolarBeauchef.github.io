@@ -17,7 +17,6 @@
   <Script src = "./code/highstock.js"> </script>
   <Script src = "./code/modules/data.js"> </script>
 
-
 </head>
 <body>
 
@@ -54,17 +53,24 @@
       </div>
     </div>
   </div>
-  <!-- Container (The Band Section) -->
   <div id="container" style="height: 700px"</div>
 
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-	  <p><h5>Link de interés</h5></p>
-      <p><a href="http://ingenieria.uchile.cl" target="_blank"> Facultad de Ingeniería</a></p>
-      <p><a href="http://dimec.uchile.cl/web/" target="_blank">Departamento de Ingeniería Mecánica</a></p>
-      <p><a href="http://ernc.dgf.uchile.cl:48080/inicio" target="_blank">Explorador Solar</a></p>
+<div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="index_images/cabecera.jpg" alt="Medidor de Radiación" style="width:1920px;height:730px;">
+      <div class="carousel-caption" style="">
+        <h3>LALALALALALA</h3>
+        <p>Facultad de Ciencias Físicas y Matemáticas</p>
+		<p>Universidad de Chile</p>
+      </div>
     </div>
+  </div>
 
+   <div class="col-sm-8 text-center">
+  <div class="container-fluid">
+Holaaaa
+</div>
+</div> 
    <div class="col-sm-8 text-center">
   <div class="container-fluid">
 <body>
@@ -85,7 +91,7 @@ $(document).ready(function() {
 					},
 					yAxis: {
 						title: {
-							text: 'Cº'
+							text: 'Cº’
 						}
 					}
 			    });
@@ -93,79 +99,13 @@ $(document).ready(function() {
 
 
 		});
-
-
-	   // $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
-    // Create the chart
-    //Highcharts.stockChart('container3', {
-
-
-      //  rangeSelector: {
-        //    selected: 1
-        //},
-
-        //title: {
-          //  text: 'Prueba'
-        //},
-
-        //series: [{
-          //  name: 'AAPL',
-            //data: data,
-          //  tooltip: {
-            //    valueDecimals: 2
-            //}
-      //  }]
-  //  });
-//});
 </script>
 <div id="container3" style="height: 400px; min-width: 310px"></div>
 </body>
 
 
 </div>
-</div>
-
-    <div class="col-sm-2 sidenav">
-
-	<div class="well">
-        	<p>
-<h5>Primera Edición de Revista Dinámica </h5>
-<a href="http://dimec.uchile.cl/web/2017/04/primera-edicion-de-revista-dinamica/" target="_blank">
-<img src="index_images/revista.jpg" alt="revista.jpg" width="150" height="220" border="0">
-</a>
- </p>
-      	</d
-
-	<head>
-    <style>
-      #map {
-        height: 180px;
-        width: 100%;
-       }
-    </style>
-	</head>
-  <body>
-    <h5>Beauchef 851, Santiago</h5>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var here = {lat: -33.457813, lng: -70.6644018};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: here
-        });
-        var marker = new google.maps.Marker({
-          position: here,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
-    </script>
-  </body>
-
-    </div>
+</div> 
 </div>
 </div>
 
