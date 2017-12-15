@@ -55,22 +55,12 @@
   </div>
   <div id="container" style="height: 700px"</div>
 
-<div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="index_images/cabecera.jpg" alt="Medidor de Radiación" style="width:1920px;height:730px;">
-      <div class="carousel-caption" style="">
-        <h3>LALALALALALA</h3>
-        <p>Facultad de Ciencias Físicas y Matemáticas</p>
-		<p>Universidad de Chile</p>
-      </div>
-    </div>
-  </div>
-
    <div class="col-sm-8 text-center">
   <div class="container-fluid">
-Holaaaa
+<body> Holaaaa</body>
 </div>
 </div> 
+	
    <div class="col-sm-8 text-center">
   <div class="container-fluid">
 <body>
@@ -109,8 +99,39 @@ $(document).ready(function() {
 </div>
 </div>
 
-<footer class="container-fluid text-center">
-  <p>Página en versión beta. Cualquier comentario o sugerencia es bienvenida</p>
+<footer class="container-fluid text-center"><script>
+$(document).ready(function(){
+    $("#Minuto").click(function(){
+    	$("p1").show(1000);
+        $("p2").hide(1000);
+        $("p3").hide(1000);
+    });
+    $("#Hora").click(function(){
+        $("p2").show(1000);
+        $("p1").hide(1000);
+        $("p3").hide(1000);
+    });
+    $("#Dia").click(function(){
+        $("p3").show(1000);
+        $("p2").hide(1000);
+        $("p1").hide(1000);
+    });
+});
+</script>
+</head>
+<body>
+<button id="Minuto">Hide</button>
+<button id="Hora">Show</button>
+<button id="Dia">Hide</button>
+</body>
+
+<body>
+<p1>Minuto</p1>
+<p2>Hora</p2>
+<p3>Dia</p3> 
+
+
+</body>
 </footer>
 </body>
 </html>
