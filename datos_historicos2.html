@@ -61,7 +61,7 @@
 $(document).ready(function() {
 
 
-			$.get('./csv/minutos/Datos_temperatura_minutos.csv', function(csv) {
+			$.get(<p id="'csv'">'./csv/minutos/Datos_temperatura_minutos.csv'</p>, function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
@@ -115,6 +115,12 @@ $(document).ready(function(){
         $("p2").show(1000);
         $("p3").show(1000);
     });
+    $("#temp_min").click(function(){
+        $("#csv").html('./csv/minutos/Datos_temperatura_minutos.csv');
+    });
+    $("#ahorasi").click(function(){
+        $("#csv").html('./csv/ahorasi.csv');
+    });
 });
 </script>
 </head>
@@ -131,10 +137,8 @@ $(document).ready(function(){
 <br/>
 <p1>
 Dato             Descargar         Previsualizar<br/>
-Venus             0,949            0,62 años	<br/>
-Tierra            1                1    año	<br/>
-Marte             0,532            1,88 años	<br/>
-Júpiter          11,209           11,86 años	<br/>
+Ahorasi             0,949            <button id="temp_min">Show HTML</button>	<br/>
+TEmperaturas            1             <button id="ahorasi">Show HTML</button>	<br/>
 	</p1>
 <br/>
 <p2>Hora</p2>
