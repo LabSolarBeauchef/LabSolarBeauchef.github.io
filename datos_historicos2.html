@@ -61,7 +61,7 @@
 $(document).ready(function() {
 
 
-			$.get(<p id="csv">'./csv/minutos/Datos_temperatura_minutos.csv'</p>, function(csv) {
+			$.get(<input type="text" id="csv" value="'./csv/minutos/Datos_temperatura_minutos.csv'">, function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
@@ -116,10 +116,10 @@ $(document).ready(function(){
         $("p3").show(1000);
     });
     $("#temp_min").click(function(){
-        $("#csv").html('./csv/minutos/Datos_temperatura_minutos.csv');
+        $("#csv").val('./csv/minutos/Datos_temperatura_minutos.csv');
     });
     $("#ahorasi").click(function(){
-        $("#csv").html('./csv/ahorasi.csv');
+        $("#csv").val('./csv/ahorasi.csv');
     });
 });
 </script>
