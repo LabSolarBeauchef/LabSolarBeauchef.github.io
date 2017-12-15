@@ -117,6 +117,11 @@ $(document).ready(function(){
         $("p2").hide(1000);
         $("p1").hide(1000);
     });
+    $("#Todos").click(function(){
+        $("p1").show(1000);
+        $("p2").show(1000);
+        $("p3").show(1000);
+    });
 });
 </script>
 </head>
@@ -125,15 +130,18 @@ $(document).ready(function(){
 
 <body>
 <p>
-<button id="Minuto">Hide</button>
-<button id="Hora">Show</button>
-<button id="Dia">Hide</button>
+	
+<button id="Todos">Mostrar Todos</button>
+<button id="Minuto">Datos por minutos</button>
+<button id="Hora">Datos por hora</button>
+<button id="Dia">Datos por día</button>
 <br/>
 <p1>Minuto</p1>
-	<br/>
+<br/>
 <p2>Hora</p2>
-	<br/>
-<p3>Dia</p3> 
+<br/>
+<p3>Dia</p3>
+<br/>
 
 </body>
 </footer>
