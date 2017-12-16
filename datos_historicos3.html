@@ -55,7 +55,7 @@
     </div>
   </div>
 
-  <div id="container" style="height: 1500px"</div>
+  <div id="container" style="height: 700px"</div>
 
 
 
@@ -92,6 +92,42 @@ $(document).ready(function() {
 </div>
 </div>
 
+<div id="container" style="height: 700px"</div>
+<div class="col-sm-8 text-center">
+<div class="container-fluid">
+
+<body>
+<Script>
+$(document).ready(function() {
+
+
+			$.get('./csv/minutos/Datos_temperatura_minutos.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Temperatura'
+					},
+					yAxis: {
+						title: {
+							text: 'Cº'
+						}
+					}
+			    });
+			});
+		});
+</script>
+<div id="container3" style="height: 400px; min-width: 310px"></div>
+</body>
+	  
+</div>
+</div>
+
+	
 <footer class="container-fluid text-center">
   <p>Página en versión beta. Cualquier comentario o sugerencia es bienvenida</p>
 </footer>
