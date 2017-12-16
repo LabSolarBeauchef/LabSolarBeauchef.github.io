@@ -93,18 +93,23 @@
 <p1>
 Dato Descargar Previsualizar<br>
 Ahorasi 0,949 <button id="temp_min">Show HTML</button> <br>
-TEmperaturas 1 <button id="ahorasi">Show HTML</button> <br>
-</p1><br>
+TEmperaturas 1 <button id="ahorasi">Show HTML</button> </p1><br>
 
 <p2>Hora</p2>
 <br>
 
-<p3>Dia<br>
+<p3>Dia </p3>
 <br>
 <br>
-</p3>
+<br>
 <div class="col-sm-8 text-center">
-<div class="container-fluid">
+<div style="height: 69px;" class="container-fluid">
+</div>
+</div>
+
+<p> </p>
+<div class="col-sm-8 text-center">
+<div style="height: 69px;" class="container-fluid">
 <script>
 $(document).ready(function() {
 
@@ -133,36 +138,5 @@ $(document).ready(function() {
 </script></div>
 </div>
 
-<p> <footer class="container-fluid text-center">
-<script>
-$(document).ready(function(){
-    $("#Minuto").click(function(){
-    	$("p1").show(1000);
-        $("p2").hide(1000);
-        $("p3").hide(1000);
-    });
-    $("#Hora").click(function(){
-        $("p2").show(1000);
-        $("p1").hide(1000);
-        $("p3").hide(1000);
-    });
-    $("#Dia").click(function(){
-        $("p3").show(1000);
-        $("p2").hide(1000);
-        $("p1").hide(1000);
-    });
-    $("#Todos").click(function(){
-        $("p1").show(1000);
-        $("p2").show(1000);
-        $("p3").show(1000);
-    });
-    $("#temp_min").click(function(){
-        $("#csv").val('./csv/minutos/Datos_temperatura_minutos.csv');
-    });
-    $("#ahorasi").click(function(){
-        $("#csv").val('./csv/ahorasi.csv');
-    });
-});
-</script></footer></p>
 
 </body></html>
