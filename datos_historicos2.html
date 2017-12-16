@@ -1,67 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <title>Laboratorio de Medición Solar, DIMEC UChile</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="prototipo_estilo.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://code.highcharts.com/highcharts.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://code.highcharts.com/modules/series-label.js"></script>
-  <Script src = "./code/highstock.js"> </script>
-  <Script src = "./code/modules/data.js"> </script>
 
-</head>
-<body>
+  
+  
+  <meta charset="utf-8">
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Inicio</a></li>
-        <li><a href="descripcion_equipos.html">Equipos</a></li>
-        <li><a href="datos_historicos.html">Datos de medición</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
- <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="index_images/cabecera.jpg" alt="Medidor de Radiación" style="width:1920px;height:740px;">
-      <div class="carousel-caption" style="">
-        <h3>Estación de medición de radiación solar</h3>
-        <p>Facultad de Ciencias Físicas y Matemáticas</p>
-		<p>Universidad de Chile</p>
-      </div>
-    </div>
-  </div>
-  <div id="container" style="height: 700px"</div>	
-   <div class="col-sm-8 text-center">
-  <div class="container-fluid">
-<body>
-<Script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="stylesheet" href="prototipo_estilo2.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+  
+  <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  
+  <script src="./code/highstock.js"> </script>
+  
+  <script src="./code/modules/data.js"> </script>
+</head><body>
+<nav class="navbar navbar-inverse"> </nav>
+<div class="container-fluid">
+<div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span><span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+<a class="navbar-brand" href="#">Logo</a> </div>
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+  <li class="active"><a href="index.html">Inicio</a><br>
+    <br>
+  <br>
+</li>
+  <li><a href="descripcion_equipos.html">Equipos</a><br>
+    <br>
+  <br>
+</li>
+  <li><a href="datos_historicos.html">Datos de medición</a><br>
+    <br>
+  <br>
+</li>
+  <li><a href="contacto.html">Contacto</a><br>
+    <br>
+  <br>
+</li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a><br>
+    <br>
+  <br>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="carousel-inner" role="listbox">
+<div class="item active"> <img src="index_images/cabecera.jpg" alt="Medidor de Radiación" style="width: 1920px; height: 740px;">
+<div class="carousel-caption" style="">
+<h3>Estación de medición de radiación solar</h3>
+<p>Facultad de Ciencias Físicas y Matemáticas</p>
+<p>Universidad de Chile</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-8 text-center">
+<div class="container-fluid">
+</div>
+</div>
+
+<footer class="container-fluid text-center">
+</footer><button id="Todos">Mostrar Todos</button>
+<button id="Minuto">Datos por minutos</button>
+<button id="Hora">Datos por hora</button>
+<button id="Dia">Datos por día</button>
+<br>
+
+<p1>
+Dato Descargar Previsualizar<br>
+Ahorasi 0,949 <button id="temp_min">Show HTML</button> <br>
+TEmperaturas 1 <button id="ahorasi">Show HTML</button> <br>
+</p1><br>
+
+<p2>Hora</p2>
+<br>
+
+<p3>Dia<br>
+<br>
+<br>
+</p3>
+<div class="col-sm-8 text-center">
+<div class="container-fluid">
+<script>
 $(document).ready(function() {
 
 
-			$.get(<input type="text" id="csv" value="'./csv/minutos/Datos_temperatura_minutos.csv'">, function(csv) {
+			$.get('./csv/minutos/Datos_temperatura_minutos.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
@@ -82,17 +130,10 @@ $(document).ready(function() {
 
 
 		});
-</script>
-<div id="container3" style="height: 400px; min-width: 310px"></div>
-</body>
-
-
-</div>
-</div> 
-</div>
+</script></div>
 </div>
 
-<footer class="container-fluid text-center">
+<p> <footer class="container-fluid text-center">
 <script>
 $(document).ready(function(){
     $("#Minuto").click(function(){
@@ -122,31 +163,6 @@ $(document).ready(function(){
         $("#csv").val('./csv/ahorasi.csv');
     });
 });
-</script>
-</head>
+</script></footer></p>
 
-<head><title>Ejemplo de etiqueta p</title></head>
-
-<body>
-<p>
-	
-<button id="Todos">Mostrar Todos</button>
-<button id="Minuto">Datos por minutos</button>
-<button id="Hora">Datos por hora</button>
-<button id="Dia">Datos por día</button>
-<br/>
-<p1>
-Dato             Descargar         Previsualizar<br/>
-Ahorasi             0,949            <button id="temp_min">Show HTML</button>	<br/>
-TEmperaturas            1             <button id="ahorasi">Show HTML</button>	<br/>
-	</p1>
-<br/>
-<p2>Hora</p2>
-<br/>
-<p3>Dia</p3>
-<br/>
-
-</body>
-</footer>
-</body>
-</html>
+</body></html>
