@@ -110,11 +110,12 @@ TEmperaturas 1 <button id="ahorasi">Show HTML</button> </p1><br>
 <p> </p>
 <div class="col-sm-8 text-center">
 <div style="height: 69px;" class="container-fluid">
+
 <script>
 $(document).ready(function() {
 
 
-			$.get('./csv/minutos/Datos_temperatura_minutos.csv', function(csv) {
+			$.get(‘./csv/minutos/Datos_temperatura_minutos.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
