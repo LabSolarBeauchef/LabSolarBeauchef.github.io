@@ -133,11 +133,9 @@ $(document).ready(function() {
 <div id="container" class="col-sm-8 text-center">	   
 <script>
 $(document).ready(function(){
-    $("#button0").click(function(){
-        $("p1").show(1000);
-        $("p2").show(1000);
-        $("p3").show(1000);
-    });
+    $("p1").hide();
+    $("p2").hide();
+    $("p3").hide();
     $("#button1").click(function(){
         $("p1").show(1000);
         $("p2").hide(1000);
@@ -157,7 +155,6 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<button id="button0">Mostrar Todos</button>
 <button id="button1">Días</button>
 <button id="button2">Horas</button>
 <button id="button3">Minutos</button>
