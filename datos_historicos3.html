@@ -131,19 +131,50 @@ $(document).ready(function() {
 </body>
 </div>
 <div id="container" class="col-sm-8 text-center">	   
-	   holaa3
-	   
-	   holaa3
-	   
-	   holaa3
-	   
-	   holaa3
-	   
-	444444444444
-	   
-	   holaa3
-	   
-	   holaa3
+<script>
+$(document).ready(function(){
+    $("#button0").click(function(){
+        $("p1").show(1000);
+        $("p2").show(1000);
+        $("p3").show(1000);
+    });
+    $("#button1").click(function(){
+        $("p1").show(1000);
+        $("p2").hide(1000);
+        $("p3").show(1000);
+    });
+    $("#button2").click(function(){
+        $("p1").hide(1000);
+        $("p2").show(1000);
+        $("p3").hide(1000);
+    });
+    $("#button3").click(function(){
+        $("p1").hide(1000);
+		$("p2").hide(1000);
+        $("p3").show(1000);
+    });
+});
+</script>
+</head>
+<body>
+<button id="button0">Mostrar Todos</button>
+<button id="button1">Días</button>
+<button id="button2">Horas</button>
+<button id="button3">Minutos</button>
+
+<br>
+<br>
+<p1>
+aaaaa
+</p1> 
+	
+<p2>
+bbbbb
+</p2> 
+<p3>
+cccccc
+</p3> 
+
 </div>
 </div>
 
