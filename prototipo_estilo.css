@@ -64,3 +64,7 @@ margin: 0 !important;
 	width: 50%;
 	margin: auto;
 }
+.highcharts-container {
+    width:100% !important;
+    height:100% !important;
+}
