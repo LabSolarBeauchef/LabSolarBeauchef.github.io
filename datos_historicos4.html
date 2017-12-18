@@ -122,10 +122,7 @@ $(document).ready(function() {
 
 
 			$.get('./csv/ahorasi.csv', function(csv) {
-			    Highcharts.stockChart('container3', {
-				    rangeSelector: {
-                        selected: 1
-                    },  
+			    Highcharts.stockChart('container3', {  
 			        chart: {
 			        	type: 'line',
 						width: 835
