@@ -95,33 +95,56 @@ $(document).ready(function() {
 
 <script>
 $(document).ready(function(){
-    $("button").click(function(){
-        $("p").hide(1000);
+    $("#button0").click(function(){
+        $("p1").show(1000);
+        $("p2").show(1000);
+        $("p3").show(1000);
     });
-    $("button1").click(function(){
-        $("p1").hide(1000);
-    });
-    $("button2").click(function(){
+    $("#button1").click(function(){
+        $("p1").show(1000);
         $("p2").hide(1000);
+        $("p3").show(1000);
     });
-    $("button3").click(function(){
+    $("#button2").click(function(){
+        $("p1").hide(1000);
+        $("p2").show(1000);
         $("p3").hide(1000);
+    });
+    $("#button3").click(function(){
+        $("p1").hide(1000);
+		$("p2").hide(1000);
+        $("p3").show(1000);
     });
 });
 </script>
 </head>
 <body>
+<button id="button0">Mostrar Todos</button>
+<button id="button1">Días</button>
+<button id="button2">Horas</button>
+<button id="button3">Minutos</button>
 
-<button>Mostroar Todos</button> <button>Días</button> <button>Horas</button> <button>Minutos</button> 
 <br>
 <br>
+<p1>
+aaaaa
+</p1> 
+<p2>
+bbbbb
+</p2> 
+<p3>
+cccccc
+</p3> 
+
 <TABLE>
 <TR>
 <TD>Párametro </TD>        <TD> Previsualizar   </TD>    <TD>  Descargar</TD>
 </TR>
-<TR>
-<p1> <TD>Nombrea </TD> <TD> Boton</TD>   <TD>  Link1</TD> </p1> 
+<TR id="p1">
+ <TD>Nombres </TD> <TD> Boton</TD>   <TD>  Link1</TD> 
+</TR>
 
+<TR>
 <p1> <TD>Nombrea </TD> <TD> Boton</TD>   <TD>  Link1</TD> </p1> 
 </TR>
 <TR>
@@ -132,8 +155,16 @@ $(document).ready(function(){
 
 </TR>
 </TABLE>
-
-</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+	holi
+	
 	   
 	
 
