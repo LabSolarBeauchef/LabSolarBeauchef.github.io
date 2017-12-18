@@ -108,7 +108,6 @@
 <body>
 <Script>
 $(document).ready(function() {
-	 $("#ahorasi").click(function(){
 			$.get('./csv/ahorasi.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
@@ -128,28 +127,6 @@ $(document).ready(function() {
 			    });
 			});
 		});
-	});
-	 $("#tempe").click(function(){
-			$.get('./csv/minutos/Datos_temperatura_minutos.csv', function(csv) {
-			    Highcharts.stockChart('container', {
-			        chart: {
-			        	type: 'line'
-			        },
-			        data: {
-			            csv: csv
-			        },
-			        title: {
-						text: 'Radiación'
-					},
-					yAxis: {
-						title: {
-							text: 'W/m^2'
-						}
-					}
-			    });
-			});
-		});
-	});
 </script>
 </body>
 </div>
