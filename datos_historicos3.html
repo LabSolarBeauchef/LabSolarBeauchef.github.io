@@ -1,128 +1,78 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
   <title>Laboratorio de Medición Solar, DIMEC UChile</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="prototipo_estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <Script src = "./code/highstock.js"> </script>
+  <Script src = "./code/modules/data.js"> </script>
 
-  
-  
-  <meta charset="utf-8">
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
 
-  
-  <link rel="stylesheet" href="prototipo_estilo.css">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Inicio</a></li>
+        <li><a href="descripcion_equipos.html">Equipos</a></li>
+        <li><a href="datos_historicos.html">Datos de medición</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="index_images/cabecera.jpg" alt="Medidor de Radiación" style="width:1920px;height:720px;">
+      <div class="carousel-caption" style="">
+        <h3>Estación de medición de radiación solar</h3>
+        <p>Facultad de Ciencias Físicas y Matemáticas</p>
+		<p>Universidad de Chile</p>
+      </div>
+    </div>
+  </div>
+	
+  <div  style="height: 700px"</div>
 
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+	  <p><h5>Link de interés</h5></p>
+      <p><a href="http://ingenieria.uchile.cl" target="_blank"> Facultad de Ingeniería</a></p>
+      <p><a href="http://dimec.uchile.cl/web/" target="_blank">Departamento de Ingeniería Mecánica</a></p>
+      <p><a href="http://ernc.dgf.uchile.cl:48080/inicio" target="_blank">Explorador Solar</a></p>
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/LabSolarBeauchef" data-widget-id="942618584882335744">#LabSolarBeauchef Tweets</a>
+     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
+    </div>
 
-  
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  
-  <script src="https://code.highcharts.com/stock/highstock.js"></script>
-  
-  <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  
-  <script src="https://code.highcharts.com/modules/series-label.js"></script>
-  
-  <script src="./code/highstock.js"> </script>
-  
-  <script src="./code/modules/data.js"> </script>
-</head><body>
-<nav class="navbar navbar-inverse"> </nav>
-<div class="container-fluid">
-<div class="navbar-header"> <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span><span class="icon-bar"></span> <span class="icon-bar"></span> </button><a class="navbar-brand" href="#">Logo</a> </div>
-<div class="collapse navbar-collapse" id="myNavbar">
-<ul class="nav navbar-nav">
-  <li class="active"><a href="index.html">Inicio</a><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  <br>
-</li>
-  <li><a href="descripcion_equipos.html">Equipos</a><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  <br>
-</li>
-  <li><a href="datos_historicos.html">Datos de medición</a><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  <br>
-</li>
-  <li><a href="contacto.html">Contacto</a><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  <br>
-</li>
-</ul>
-<ul class="nav navbar-nav navbar-right">
-  <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-  <br>
-</li>
-</ul>
-</div>
-</div>
-
-<div class="carousel-inner" role="listbox">
-<div class="item active">
-<div class="carousel-caption" style="">
-
-<button id="Todos">Mostrar Todos</button>
-<button id="Minuto">Datos por minutos</button>
-<button id="Hora">Datos por hora</button>
-<button id="Dia">Datos por día</button>
-<br>
-
-<p1>
-Dato Descargar Previsualizar<br>
-Ahorasi 0,949 <button id="temp_min">Show HTML</button> <br>
-TEmperaturas 1 <button id="ahorasi">Show HTML</button> </p1><br>
-
-<p2>Hora</p2>
-<br>
-
-<p3>Dia </p3>
-
-</div>
-</div>
-</div>
-
-<div class="carousel-inner" role="listbox">
-<div class="item active"><br>
-</div>
-</div>
-
-<div class="col-sm-8 text-center">
-<div class="container-fluid">
-<script>
+   <div id="container" class="col-sm-8 text-center">
+<body>
+<Script>
 $(document).ready(function() {
-
-
-			$.get('./csv/minutos/Datos_temperatura_minutos.csv', function(csv) {
+			$.get('./csv/ahorasi.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
@@ -131,21 +81,69 @@ $(document).ready(function() {
 			            csv: csv
 			        },
 			        title: {
-						text: 'Temperatura'
+						text: 'Radiación'
 					},
 					yAxis: {
 						title: {
-							text: 'Cº'
+							text: 'W/m^2'
 						}
 					}
 			    });
 			});
 		});
-</script></div>
+</script>
+	
+<div  id="container3" style="height: 400px; min-width: 310px"></div>
+</body>
+
 </div>
 
-<footer class="container-fluid text-center"> </footer>
-<p>Página en versión beta. Cualquier comentario o sugerencia es
-bienvenida</p>
+    <div class="col-sm-2 sidenav">
 
-</body></html>
+	<div class="well">
+        	<p>
+<h5>Primera Edición de Revista Dinámica </h5>
+<a href="http://dimec.uchile.cl/web/2017/04/primera-edicion-de-revista-dinamica/" target="_blank">
+<img src="index_images/revista.jpg" alt="revista.jpg" width="150" height="220" border="0">
+</a>
+ </p>
+      	</d
+
+	<head>
+    <style>
+      #map {
+        height: 180px;
+        width: 100%;
+       }
+    </style>
+	</head>
+  <body>
+    <h5>Beauchef 851, Santiago</h5>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var here = {lat: -33.457813, lng: -70.6644018};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: here
+        });
+        var marker = new google.maps.Marker({
+          position: here,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
+    </script>
+  </body>
+
+    </div>
+</div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Página en versión beta. Cualquier comentario o sugerencia es bienvenida</p>
+</footer>
+</body>
+</html>
