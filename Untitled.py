@@ -50,7 +50,6 @@ with open('./csv/minutos/' + nombre +'_minutos'+'.csv', 'w') as csvfile:
     for i in range(len(lista[0])): ## LEN de todos los datos de fechas
            writer.writerow({'Fechas': lista[0][i][0][0],  nombres[5]: lista[5][i][0] ,nombres[6]: lista[6][i][0],nombres[7]: lista[7][i][0] })
 
-print lista3
 for j in range(2,len(lista3[1])):
     nombre= ((str(lista3[1][j]).replace(" ", "")).replace("u'", "")).replace("'", "") #str(lista2[2][j]).replace(" ", "")
     with open('./csv/minutos/'+nombre +'_minutos'+'.csv', 'w') as csvfile:
@@ -58,7 +57,7 @@ for j in range(2,len(lista3[1])):
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for i in range(len(lista[0])): ## LEN de todos los datos de fechas
-            writer.writerow({'Fechas': lista3[0][1][0][0],  nombre : str(lista3[2][i][j]).replace("[u'NAN']", "0")})
+            writer.writerow({'Fechas': lista3[0][i][0][0],  nombre : str(lista3[2][i][j]).replace("[u'NAN']", "0")})
  
 nombre= 'Datos_radiacion'
 with open('./csv/minutos/'+nombre +'_minutos'+'.csv', 'w') as csvfile:
@@ -66,7 +65,7 @@ with open('./csv/minutos/'+nombre +'_minutos'+'.csv', 'w') as csvfile:
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
     writer.writeheader()
     for i in range(len(lista[0])): ## LEN de todos los datos de fechas
-        writer.writerow({'Fechas': lista3[0][1][0][0],  ((str(lista3[1][2]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i][2]).replace("[u'NAN']", "0"), ((str(lista3[1][3]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i][3]).replace("[u'NAN']", "0"),   ((str(lista3[1][4]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i][4]).replace("[u'NAN']", "0"), })
+        writer.writerow({'Fechas': lista3[0][i][0][0],  ((str(lista3[1][2]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i][2]).replace("[u'NAN']", "0"), ((str(lista3[1][3]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i][3]).replace("[u'NAN']", "0"),   ((str(lista3[1][4]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i][4]).replace("[u'NAN']", "0"), })
  
 tiempo2=time.time()
 print 'Me demoro ' + str(tiempo2-tiempo1) + 'segundos'
