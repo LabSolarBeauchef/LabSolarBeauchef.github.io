@@ -155,8 +155,7 @@ $(document).ready(function(){
 			$.get('./csv/ahorasi.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
-			        	type: 'line',
-						width: 100%
+			        	type: 'line'
 			        },
 			        data: {
 			            csv: csv
