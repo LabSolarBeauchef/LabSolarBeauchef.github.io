@@ -108,7 +108,7 @@
 <body>
 <Script>
 $(document).ready(function() {
-			$.get('./csv/ahorasi.csv', function(csv) {
+			$.get('./csv/minutos/Datos_radiacion_minutos.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
@@ -227,9 +227,12 @@ $(document).ready(function(){
 <TABLE>	
 <TR> <TD>Párametros en minutos</TD>        <TD> Previsualizar   </TD>    <TD>  Descargar</TD> </TR>
 <TR> <TD>Radiación (Global/Directa/Difusa)</TD> <TD> 
-<button id="radgddmin">Previsualizar</button></TD>   <TD>  Link1</TD>  </TR>
-<TR> <TD>Temperatura </TD> <TD> <button id="tempmmmin">Previsualizar</button></TD>   <TD>  Link1</TD>  </TR>
-<TR> <TD>BattV </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD>  Link1</TD>  </TR>
+<button id="radgddmin">Previsualizar</button></TD>   <TD>  <a href="/csv/minutos/Datos_radiacion_minutos.csv" download> descargar
+</a></TD>  </TR>
+<TR> <TD>Temperatura </TD> <TD> <button id="tempmmmin">Previsualizar</button></TD> <TD> <a href="/csv/minutos/Datos_temperatura_minutos.csv" download> descargar
+</a></TD>  </TR>
+<TR> <TD>BattV </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/BattV_min_minutos.csv" download> descargar
+</a> </TD>  </TR>
 </TABLE>
 </p1> 	
 </center>
