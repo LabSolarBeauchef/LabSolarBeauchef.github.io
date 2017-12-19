@@ -151,8 +151,8 @@ $(document).ready(function(){
 	$("p2").hide();
         $("p3").show();
     });
-    $("#ahorasi").click(function(){
-			$.get('./csv/ahorasi.csv', function(csv) {
+    $("#radgddmin").click(function(){
+			$.get('./csv/minutos/Datos_radiacion_minutos.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
@@ -171,7 +171,7 @@ $(document).ready(function(){
 			    });
 			});
     });
-    $("#tempe").click(function(){
+    $("#tempmmmin").click(function(){
 			$.get('./csv/minutos/Datos_temperatura_minutos.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
@@ -185,7 +185,7 @@ $(document).ready(function(){
 					},
 					yAxis: {
 						title: {
-							text: 'C'
+							text: 'Cº'
 						}
 					}
 			    });
@@ -195,9 +195,9 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<button id="button1">Días</button>
+<button id="button1">Minutos</button>
 <button id="button2">Horas</button>
-<button id="button3">Minutos</button>
+<button id="button3">Días</button>
 
 <br>
 <br>
@@ -205,10 +205,10 @@ $(document).ready(function(){
 <center>
 <p1>
 <TABLE>	
-<TR> <TD>Párametros en días </TD>        <TD> Previsualizar   </TD>    <TD>  Descargar</TD> </TR>
-<TR> <TD>Radiación </TD> <TD> 
-<button id="ahorasi">Previsualizar</button></TD>   <TD>  Link1</TD>  </TR>
-<TR> <TD>Temperatura </TD> <TD> <button id="tempe">Previsualizar</button></TD>   <TD>  Link1</TD>  </TR>
+<TR> <TD>Párametros en minutos</TD>        <TD> Previsualizar   </TD>    <TD>  Descargar</TD> </TR>
+<TR> <TD>Radiación (Global/Directa/Difusa)</TD> <TD> 
+<button id="radgddmin">Previsualizar</button></TD>   <TD>  Link1</TD>  </TR>
+<TR> <TD>Temperatura </TD> <TD> <button id="tempmmmin">Previsualizar</button></TD>   <TD>  Link1</TD>  </TR>
 <TR> <TD>Nombres </TD> <TD> Boton</TD>   <TD>  Link1</TD>  </TR>
 </TABLE>
 </p1> 	
@@ -232,7 +232,7 @@ $(document).ready(function(){
 <center>
 <p3>
 <TABLE>	
-<TR> <TD>Párametros en minutos </TD>        <TD> Previsualizar   </TD>    <TD>  Descargar</TD> </TR>
+<TR> <TD>Párametros en días </TD>        <TD> Previsualizar   </TD>    <TD>  Descargar</TD> </TR>
 <TR> <TD>Nombres </TD> <TD> Boton</TD>   <TD>  Link3</TD>  </TR>
 <TR> <TD>Nombrea </TD> <TD> Boton</TD>   <TD>  Link3</TD>  </TR>
 <TR> <TD>Nombres </TD> <TD> Boton</TD>   <TD>  Link3</TD>  </TR>
