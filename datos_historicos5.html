@@ -151,6 +151,48 @@ $(document).ready(function(){
 	$("p2").hide();
         $("p3").show();
     });
+    $("#ahorasi").click(function(){
+			$.get('./csv/ahorasi.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Radiación'
+					},
+					yAxis: {
+						title: {
+							text: 'W/m^2'
+						}
+					}
+			    });
+			});
+		});
+    });
+    $("#tempe").click(function(){
+			$.get('./csv/minutos/Datos_temperatura_minutos.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Temperatura'
+					},
+					yAxis: {
+						title: {
+							text: 'C'
+						}
+					}
+			    });
+			});
+		});
+    });
 });
 </script>
 </head>
