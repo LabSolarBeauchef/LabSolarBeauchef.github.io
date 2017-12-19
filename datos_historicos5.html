@@ -191,6 +191,26 @@ $(document).ready(function(){
 			    });
 			});
     });
+    $("#battvmin").click(function(){
+			$.get('./csv/minutos/BattV_min_minutos.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'BattV_min'
+					},
+					yAxis: {
+						title: {
+							text: 'V'
+						}
+					}
+			    });
+			});
+    });
 });
 </script>
 </head>
@@ -209,7 +229,7 @@ $(document).ready(function(){
 <TR> <TD>Radiación (Global/Directa/Difusa)</TD> <TD> 
 <button id="radgddmin">Previsualizar</button></TD>   <TD>  Link1</TD>  </TR>
 <TR> <TD>Temperatura </TD> <TD> <button id="tempmmmin">Previsualizar</button></TD>   <TD>  Link1</TD>  </TR>
-<TR> <TD>Nombres </TD> <TD> Boton</TD>   <TD>  Link1</TD>  </TR>
+<TR> <TD>BattV </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD>  Link1</TD>  </TR>
 </TABLE>
 </p1> 	
 </center>
