@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Laboratorio de Medición Solar, DIMEC UChile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="prototipo_estilo.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+  <script src="https://code.highcharts.com/modules/series-label.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body>
+<script type='text/javascript'>//<![CDATA[
+$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
+    // Create the chart
+    Highcharts.stockChart('container2', {
+
+
+        rangeSelector: {
+            selected: 1
+        },
+
+        title: {
+            text: 'AAPL Stock Price'
+        },
+
+        series: [{
+            name: 'AAPL',
+            data: data,
+            tooltip: {
+                valueDecimals: 2
+            }
+        }]
+    });
+});
+//]]> 
+</script>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Inicio</a></li>
+        <li><a href="descripcion_equipos.html">Equipos</a></li>
+        <li><a href="datos_historicos.html">Datos de medición</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="index_images/cabecera.jpg" alt="Medidor de Radiación" style="width:1920px;height:720px;">
+      <div class="carousel-caption" style="">
+        <h3>Estación de medición de radiación solar</h3>
+        <p>Facultad de Ciencias Físicas y Matemáticas</p>
+		<p>Universidad de Chile</p>
+      </div>
+    </div> 
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+	  <p><h3>Link de interés</h3></p>
+      <p><a href="http://ingenieria.uchile.cl" target="_blank"> Facultad de Ingeniería</a></p>
+      <p><a href="http://dimec.uchile.cl/web/" target="_blank">Departamento de Ingeniería Mecánica</a></p>
+      <p><a href="http://ernc.dgf.uchile.cl:48080/inicio" target="_blank">Explorador Solar</a></p>
+    </div>
+	<div class="col-sm-8" id="container3” style="height: 400px; min-width: 310px"></div>
+   <div class="col-sm-8 text-center"> 
+  <h1 align="left">Estación Solar Universidad de Chile</h1>
+  <div class="col-sm-6">
+      <p><strong>Equipos</strong></p><br>
+	  <a href="#demo" data-toggle="collapse">
+      <img src="index_images/foto5.jpg" alt="Random Name" class="img-circle person" style="width:200px;height:300px;">
+	  </a>
+	  <div id="demo" class="collapse">
+      <p>Equipos utilizados para la </p>
+      <p>medición. Información mas</p>
+      <p>detallada la encuentra<a href="descripcion_equipos.html"> aquí</a></p>
+    </div>
+    </div>
+    <div class="col-sm-6">
+	  <p><strong>Datos de medición</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+      <img src="index_images/foto3.jpg" alt="Random Name" class="img-circle person" style="width:200px;height:300px;">
+	  </a>
+	  <div id="demo2" class="collapse">
+      <p>Datos obtenidos desde Junio </p>
+      <p>hasta la fecha. Datos sobre radiación</p>
+      <p>los encuentra<a href="datos_historicos.html"> aquí</a></p>
+      </div>
+    </div>
+</div>
+
+    <div class="col-sm-2 sidenav">
+
+	<div class="well">
+        	<p> 
+<h5>Primera Edición de Revista Dinámica </h5>
+<a href="http://dimec.uchile.cl/web/2017/04/primera-edicion-de-revista-dinamica/" target="_blank">
+<img src="index_images/revista.jpg" alt="revista.jpg" width="150" height="220" border="0">
+</a>
+ </p>
+      	</div>
+	
+	<head>
+    <style>
+      #map {
+        height: 180px;
+        width: 100%;
+       }
+    </style>
+	</head>
+  <body>
+    <h5>Beauchef 851, Santiago</h5>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var here = {lat: -33.457813, lng: -70.6644018};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: here
+        });
+        var marker = new google.maps.Marker({
+          position: here,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
+    </script>
+  </body>
+
+    </div>
+</div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Página en versión beta. Cualquier comentario o sugerencia es bienvenida</p>
+</footer>
+
+</body>
+</html>
