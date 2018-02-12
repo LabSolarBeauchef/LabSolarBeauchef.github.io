@@ -102,11 +102,47 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <h4>¿Donde están ubicados los equipos?</h4>
+          
+       <div class="row">
+        <div class="col s12 m4">
+          <p class="light">Los equipos se encuentran instalados en el techo del edificio de Beauchef 851 de la Facultad de Ciencias Físicas y Matematicas de la Universidad de Chile</p>
         </div>
+         
+        <div class="col s12 m4">
+          <head>
+    <style>
+      #map {
+        height: 180px;
+        width: 100%;
+       }
+    </style>
+	</head>
+  <body>
+    <h5>Beauchef 851, Santiago</h5>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var here = {lat: -33.457813, lng: -70.6644018};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: here
+        });
+        var marker = new google.maps.Marker({
+          position: here,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
+    </script>
+        </div>
+       </div>
+          
       </div>
 
+     </div>
     </div>
   </div>
 
