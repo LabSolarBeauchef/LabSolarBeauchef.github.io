@@ -1,160 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Laboratorio de Medición Solar, DIMEC UChile</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="prototipo_estilo.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/stock/highstock.js"></script>
-  <script src="https://code.highcharts.com/modules/series-label.js"></script>
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Parallax Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-<script type='text/javascript'>//<![CDATA[
-$.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function (data) {
-    // Create the chart
-    Highcharts.stockChart('container2', {
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
 
-
-        rangeSelector: {
-            selected: 1
-        },
-
-        title: {
-            text: 'AAPL Stock Price'
-        },
-
-        series: [{
-            name: 'AAPL',
-            data: data,
-            tooltip: {
-                valueDecimals: 2
-            }
-        }]
-    });
-});
-//]]> 
-</script>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Inicio</a></li>
-        <li><a href="descripcion_equipos.html">Equipos</a></li>
-        <li><a href="datos_historicos.html">Datos de medición</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Speeds up development</h5>
+
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User Experience Focused</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to work with</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</nav>
- <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="index_images/cabecera.jpg" alt="Medidor de Radiación" style="width:1920px;height:720px;">
-      <div class="carousel-caption" style="">
-        <h3>Estación de medición de radiación solar</h3>
-        <p>Facultad de Ciencias Físicas y Matemáticas</p>
-		<p>Universidad de Chile</p>
-      </div>
-    </div> 
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-	  <p><h3>Link de interés</h3></p>
-      <p><a href="http://ingenieria.uchile.cl" target="_blank"> Facultad de Ingeniería</a></p>
-      <p><a href="http://dimec.uchile.cl/web/" target="_blank">Departamento de Ingeniería Mecánica</a></p>
-      <p><a href="http://ernc.dgf.uchile.cl:48080/inicio" target="_blank">Explorador Solar</a></p>
-    </div>
-	<div class="col-sm-8" id="container3” style="height: 400px; min-width: 310px"></div>
-   <div class="col-sm-8 text-center"> 
-  <h1 align="left">Estación Solar Universidad de Chile</h1>
-  <div class="col-sm-6">
-      <p><strong>Equipos</strong></p><br>
-	  <a href="#demo" data-toggle="collapse">
-      <img src="index_images/foto5.jpg" alt="Random Name" class="img-circle person" style="width:200px;height:300px;">
-	  </a>
-	  <div id="demo" class="collapse">
-      <p>Equipos utilizados para la </p>
-      <p>medición. Información mas</p>
-      <p>detallada la encuentra<a href="descripcion_equipos.html"> aquí</a></p>
-    </div>
-    </div>
-    <div class="col-sm-6">
-	  <p><strong>Datos de medición</strong></p><br>
-      <a href="#demo2" data-toggle="collapse">
-      <img src="index_images/foto3.jpg" alt="Random Name" class="img-circle person" style="width:200px;height:300px;">
-	  </a>
-	  <div id="demo2" class="collapse">
-      <p>Datos obtenidos desde Junio </p>
-      <p>hasta la fecha. Datos sobre radiación</p>
-      <p>los encuentra<a href="datos_historicos5.html"> aquí</a></p>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
       </div>
     </div>
-</div>
+    <div class="parallax"><img src="background2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
 
-    <div class="col-sm-2 sidenav">
+  <div class="container">
+    <div class="section">
 
-	<div class="well">
-        	<p> 
-<h5>Primera Edición de Revista Dinámica </h5>
-<a href="http://dimec.uchile.cl/web/2017/04/primera-edicion-de-revista-dinamica/" target="_blank">
-<img src="index_images/revista.jpg" alt="revista.jpg" width="150" height="220" border="0">
-</a>
- </p>
-      	</div>
-	
-	<head>
-    <style>
-      #map {
-        height: 180px;
-        width: 100%;
-       }
-    </style>
-	</head>
-  <body>
-    <h5>Beauchef 851, Santiago</h5>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var here = {lat: -33.457813, lng: -70.6644018};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: here
-        });
-        var marker = new google.maps.Marker({
-          position: here,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
-    </script>
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>Contact Us</h4>
+          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
   </body>
-
-    </div>
-</div>
-</div>
-
-<footer class="container-fluid text-center">
-  <p>Página en versión beta. Cualquier comentario o sugerencia es bienvenida</p>
-</footer>
-
-</body>
 </html>

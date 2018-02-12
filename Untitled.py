@@ -66,7 +66,14 @@ with open('./csv/minutos/'+nombre +'_minutos'+'.csv', 'w') as csvfile:
     writer.writeheader()
     for i in range(len(lista3[0])): ## LEN de todos los datos de fechas
         writer.writerow({'Fechas': lista3[0][i][0][0],  ((str(lista3[1][2]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i][2]).replace("[u'NAN']", "0"), ((str(lista3[1][3]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i][3]).replace("[u'NAN']", "0"),   ((str(lista3[1][4]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i][4]).replace("[u'NAN']", "0"), })
- 
+nombre= 'Datos_radiacion_10min'
+with open('./csv/minutos/'+nombre +'_minutos'+'.csv', 'w') as csvfile:
+    fieldnames = ['Fechas', ((str(lista3[1][2]).replace(" ", "")).replace("u'", "")).replace("'", ""), ((str(lista3[1][3]).replace(" ", "")).replace("u'", "")).replace("'", ""),((str(lista3[1][4]).replace(" ", "")).replace("u'", "")).replace("'", "")  ]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    writer.writeheader()
+    for i in range(len(lista3[0])/10): ## LEN de todos los datos de fechas
+        writer.writerow({'Fechas': lista3[0][i*10][0][0],  ((str(lista3[1][2]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i*10][2]).replace("[u'NAN']", "0"), ((str(lista3[1][3]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i*10][3]).replace("[u'NAN']", "0"),   ((str(lista3[1][4]).replace(" ", "")).replace("u'", "")).replace("'", "")  : str(lista3[2][i*10][4]).replace("[u'NAN']", "0"), })
+  
 tiempo2=time.time()
 print 'Me demoro ' + str(tiempo2-tiempo1) + 'segundos'
 print '-------- Imprimir por hora-----------'
