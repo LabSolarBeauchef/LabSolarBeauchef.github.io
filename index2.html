@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Laboratorio de Medicin Solar - DIMEC Uchile</title>
 
+
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -48,13 +49,17 @@
     </div>
     <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
   </div>
-
-<div id="container" class="col-sm-8 text-center" style="width:1000px">
+asdasdasd
+<div id="graf" class="col s12 m4">
 <body>
+GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO GRAFICO
+</body>
+</div>
+
 <Script>
 $(document).ready(function() {
 			$.get('./csv/minutos/Datos_radiacion_minutos.csv', function(csv) {
-			    Highcharts.stockChart('container', {
+			    Highcharts.stockChart('graf', {
 			        chart: {
 			        	type: 'line'
 			        },
@@ -66,16 +71,13 @@ $(document).ready(function() {
 					},
 					yAxis: {
 						title: {
-							text: 'W/m^2'
+							text: 'W/m2'
 						}
 					}
 			    });
 			});
 		});
 </script>
-</body>
-</div>
-
 
   <div class="container">
     <div class="section">
@@ -121,7 +123,7 @@ $(document).ready(function() {
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4>¿Donde están ubicados los equipos?</h4>
-          
+
        <div class="row">
 	<div class="col s12 m4">
           <p class="light"><img src="equipoghs.jpg" alt="equiposs" width="280" height="174"></p>
@@ -129,7 +131,7 @@ $(document).ready(function() {
         <div class="col s12 m4">
           <p class="light">Los equipos se encuentran instalados en el techo del edificio de Beauchef 851 de la Facultad de Ciencias Físicas y Matematicas de la Universidad de Chile</p>
         </div>
-         
+
         <div class="col s12 m4">
           <head>
     <style>
@@ -160,7 +162,7 @@ $(document).ready(function() {
     </script>
         </div>
        </div>
-          
+
       </div>
 
      </div>
@@ -175,10 +177,7 @@ $(document).ready(function() {
       </div>
     </div>
   </footer>
-
-
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -187,8 +186,11 @@ $(document).ready(function() {
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://code.highcharts.com/modules/series-label.js"></script>
-	
+  <Script src = "./code/highstock.js"> </script>
+  <Script src = "./code/modules/data.js"> </script>
+
+
+
   </body>
 </html>
