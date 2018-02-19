@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Laboratorio de Medición Solar - DIMEC Uchile</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo"><img src="fcfm_dimec.png" alt="LogoDimec" width="150" height="56"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index2.html">Mediciones</a></li>
+        <li><a href="index3.html">Equipos</a></li>
+        <li><a href="index4.html">Contacto</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index2.html">Mediciones</a></li>
+        <li><a href="index3.html">Equipos</a></li>
+        <li><a href="index4.html">Contacto</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center white-text">Estación de medición de radiación solar</h1>
+        <div class="row center">
+          <h5 class="header col s12 white-text">Facultad de Ciencias Físicas y Matemáticas. <br><br> Universidad de Chile</h5>
+        </div>
+        <div class="row center">
+          <a href="index2.html" id="download-button" class="btn-large waves-effect waves-light orange lighten-1">Ver Mediciones</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="background1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+  <div class="container">
+	<div class="section">
+	  <div class="row">
+		<div class="col s12 m4 l8">
+     <h4 align="left"><em>José Miguel Cardemil Iglesias <small>phD. Ingeniería Mecánica,  Universidad Federal de Santa Catarina, UFSC, Florianópolis, Brasil, 2012.  </small></em></h4>
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="container">
+	<div class="section">
+
+
+      <div class="row">
+  		<div class="col s12 m4 l4">
+      <img src="contact_images/JMCardemil.jpg" alt="José Miguel Cardemil" width="200" height="200" /></a>
+      </div>
+
+      <div class="col s12 m4 l6">
+			<div>Departamento de Ingeniería Mecánica</div>
+			<div>Facultad de Ciencias Físicas y Matemáticas, Universidad de Chile</div>
+			<div>Av. Beauchef 851, Santiago, Chile</div>
+			<div>Oficina: 507 (Piso 5, Edificio Poniente)</div>
+			<div>Teléfono: +56(2)29780929</div>
+			<div>E-mail: <a href="jcardemil@ing.uchile.cl">jcardemil@ing.uchile.cl</a></div>
+      </div>
+      </div>
+
+      <div class="container">
+    	<div class="section">
+    	  <div class="row">
+    		<div class="col s12 m4 l8">
+         <h4 align="left"><em>Escanor <small> El León del pecado de la Soberbia </small></em></h4>
+    		</div>
+    	</div>
+    	</div>
+    	</div>
+
+      <div class="row">
+      <div class="col s12 m4 l4">
+      <img src="contact_images/Escanor.png" alt="Escanor, el León" width="262" height="410" /></a>
+      </div>
+
+      <div class="col s12 m4 l6">
+        <div>Reino de Liones</div>
+  			<div>Miembro de los siete pecados capitales</div>
+  			<div>El pecado del Orgullo</div>
+  			<div>Habilidad: Sunshine</div>
+  			<div>Tesoro Sagrado: Rhitta</div>
+      <div>E-mail: <a href="jcardemil@ing.uchile.cl">jcardemil@ing.uchile.cl</a></div>
+      </div>
+
+
+	</div>
+  </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>¿Donde están ubicados los equipos?</h4>
+
+       <div class="row">
+	<div class="col s12 m4">
+          <p class="light"><img src="equipoghs.jpg" alt="equiposs" width="280" height="174"></p>
+        </div>
+        <div class="col s12 m4">
+          <p class="light">Los equipos se encuentran instalados en el techo del edificio de Beauchef 851 de la Facultad de Ciencias Físicas y Matematicas de la Universidad de Chile</p>
+        </div>
+
+        <div class="col s12 m4">
+          <head>
+    <style>
+      #map {
+        height: 180px;
+        width: 100%;
+       }
+    </style>
+	</head>
+  <body>
+    <h5>Beauchef 851, Santiago</h5>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var here = {lat: -33.457813, lng: -70.6644018};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: here
+        });
+        var marker = new google.maps.Marker({
+          position: here,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn8Qz74_l6MpcdKeWyweuqOwH6F12h0cw&callback=initMap">
+    </script>
+        </div>
+       </div>
+
+      </div>
+
+     </div>
+    </div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
