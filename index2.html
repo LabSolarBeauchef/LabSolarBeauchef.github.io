@@ -208,6 +208,26 @@ $(document).ready(function(){
 			    });
 			});
     });
+	$("#HR").click(function(){
+			$.get('./csv/minutos/HR_min.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Humedad Relativa'
+					},
+					yAxis: {
+						title: {
+							text: '%'
+						}
+					}
+			    });
+			});
+    });
 });
 </script>
 <button id="button1">Minutos</button>
@@ -228,6 +248,8 @@ $(document).ready(function(){
 </a></TD>  </TR>
 <TR> <TD>BattV </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/BattV_min_minutos.csv" download> descargar
 </a> </TD>  </TR>
+<TR> <TD>Humedad Relativa </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/BattV_min_minutos.csv" download> descargar
+</a> </TD>  </TR>
 </TABLE>
 </p1> 	
 </center>
@@ -236,13 +258,28 @@ $(document).ready(function(){
 <center>
 <p2>
 <TABLE>	
-<TR> <TD>Párametros en horas </TD>        <TD> Previsualizar   </TD>    <TD>  Descargar</TD> </TR>
-<TR> <TD>Nombres </TD> <TD> Boton</TD>   <TD>  Link2</TD>  </TR>
-<TR> <TD>Nombrea </TD> <TD> Boton</TD>   <TD>  Link2</TD>  </TR>
-<TR> <TD>Nombres </TD> <TD> Boton</TD>   <TD>  Link2</TD>  </TR>
-<TR> <TD>Nombrea </TD> <TD> Boton</TD>   <TD>  Link2</TD>  </TR>
+<TR> <TD>Radiación (Global/Directa/Difusa)</TD> <TD> 
+<button id="radgddmin">Previsualizar</button></TD>   <TD>  <a href="/csv/minutos/Datos_radiacion_minutos.csv" download> descargar
+</a></TD>  </TR>
+<TR> <TD>Temperatura </TD> <TD> <button id="tempmmmin">Previsualizar</button></TD> <TD> <a href="/csv/minutos/Datos_temperatura_minutos.csv" download> descargar
+</a></TD>  </TR>
+<TR> <TD>BattV </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/BattV_min_minutos.csv" download> descargar
+</a> </TD>  </TR>
 </TABLE>
 </p2> 
+</center>
+<center>
+<p3>
+<TABLE>	
+<TR> <TD>Radiación (Global/Directa/Difusa)</TD> <TD> 
+<button id="radgddmin">Previsualizar</button></TD>   <TD>  <a href="/csv/minutos/Datos_radiacion_minutos.csv" download> descargar
+</a></TD>  </TR>
+<TR> <TD>Temperatura </TD> <TD> <button id="tempmmmin">Previsualizar</button></TD> <TD> <a href="/csv/minutos/Datos_temperatura_minutos.csv" download> descargar
+</a></TD>  </TR>
+<TR> <TD>BattV </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/BattV_min_minutos.csv" download> descargar
+</a> </TD>  </TR>
+</TABLE>
+</p3> 
 </center>
 </body>
 </div>
