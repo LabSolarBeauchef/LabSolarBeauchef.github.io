@@ -209,7 +209,7 @@ $(document).ready(function(){
 			});
     });
 	$("#HR").click(function(){
-			$.get('./csv/minutos/HR_min.csv', function(csv) {
+			$.get('./csv/minutos/RH_min.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
@@ -248,7 +248,7 @@ $(document).ready(function(){
 </a></TD>  </TR>
 <TR> <TD>BattV </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/BattV_min_minutos.csv" download> descargar
 </a> </TD>  </TR>
-<TR> <TD>Humedad Relativa </TD> <TD> <button id="HR">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/HR_minutos.csv" download> descargar
+<TR> <TD>Humedad Relativa </TD> <TD> <button id="HR">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/RH_minutos.csv" download> descargar
 </a> </TD>  </TR>
 </TABLE>
 </p1> 	
