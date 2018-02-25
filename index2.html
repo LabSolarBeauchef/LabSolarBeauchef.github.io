@@ -188,8 +188,8 @@ $(document).ready(function(){
 			    });
 			});
     });
-    $("#battvmin").click(function(){
-			$.get('./csv/minutos/BattV_min_minutos.csv', function(csv) {
+    $("#pressmin").click(function(){
+			$.get('./csv/minutos/Pres_mbar_Avg_minutos.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
@@ -208,8 +208,168 @@ $(document).ready(function(){
 			    });
 			});
     });
-	$("#HR").click(function(){
+	$("#HRmin").click(function(){
 			$.get('./csv/minutos/RH_minutos.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Humedad Relativa'
+					},
+					yAxis: {
+						title: {
+							text: '%'
+						}
+					}
+			    });
+			});
+    });
+	$("#radgddhora").click(function(){
+			$.get('./csv/hora/Datos_radiacion_hora.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Radiación'
+					},
+					yAxis: {
+						title: {
+							text: 'W/m^2'
+						}
+					}
+			    });
+			});
+    });
+    $("#tempmmhora").click(function(){
+			$.get('./csv/hora/Datos_temperatura_hora.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Temperatura'
+					},
+					yAxis: {
+						title: {
+							text: 'Cº'
+						}
+					}
+			    });
+			});
+    });
+    $("#presshora").click(function(){
+			$.get('./csv/hora/Pressure_Avg_hora.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'BattV_min'
+					},
+					yAxis: {
+						title: {
+							text: 'V'
+						}
+					}
+			    });
+			});
+    });
+	$("#HRhora").click(function(){
+			$.get('./csv/minutos/RH_Avg_hora.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Humedad Relativa'
+					},
+					yAxis: {
+						title: {
+							text: '%'
+						}
+					}
+			    });
+			});
+    });
+	$("#radgdddia").click(function(){
+			$.get('./csv/dias/Datos_radiacion_dias.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Radiación'
+					},
+					yAxis: {
+						title: {
+							text: 'W/m^2'
+						}
+					}
+			    });
+			});
+    });
+    $("#tempmmdia").click(function(){
+			$.get('./csv/dias/Datos_temperatura_dias.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Temperatura'
+					},
+					yAxis: {
+						title: {
+							text: 'Cº'
+						}
+					}
+			    });
+			});
+    });
+    $("#pressdia").click(function(){
+			$.get('./csv/dias/Pressure_Avg_dias.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'BattV_min'
+					},
+					yAxis: {
+						title: {
+							text: 'V'
+						}
+					}
+			    });
+			});
+    });
+	$("#HRdia").click(function(){
+			$.get('./csv/dias/RH_Avg_dias.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
@@ -230,25 +390,26 @@ $(document).ready(function(){
     });
 });
 </script>
+<div id="container" class="col s12 m4">  
 <button id="button1">Minutos</button>
 <button id="button2">Horas</button>
 <button id="button3">Días</button>
-
+</div>
 <br>
 <br>
 
 <center>
 <p1>
 <TABLE>	
-<TR> <TD>Párametros en minutos</TD>        <TD> Previsualizar   </TD>    <TD>  Descargar</TD> </TR>
+<TR> <TD> <center> Párametros en minutos </center> </TD> </TR> 
 <TR> <TD>Radiación (Global/Directa/Difusa)</TD> <TD> 
 <button id="radgddmin">Previsualizar</button></TD>   <TD>  <a href="/csv/minutos/Datos_radiacion_minutos.csv" download> descargar
 </a></TD>  </TR>
 <TR> <TD>Temperatura </TD> <TD> <button id="tempmmmin">Previsualizar</button></TD> <TD> <a href="/csv/minutos/Datos_temperatura_minutos.csv" download> descargar
 </a></TD>  </TR>
-<TR> <TD>BattV </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/BattV_min_minutos.csv" download> descargar
+<TR> <TD>Presión Absoluta </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/Pres_mbar_Avg_minutos.csv" download> descargar
 </a> </TD>  </TR>
-<TR> <TD>Humedad Relativa </TD> <TD> <button id="HR">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/RH_minutos.csv" download> descargar
+<TR> <TD>Humedad Relativa </TD> <TD> <button id="HRmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/RH_minutos.csv" download> descargar
 </a> </TD>  </TR>
 </TABLE>
 </p1> 	
@@ -258,12 +419,15 @@ $(document).ready(function(){
 <center>
 <p2>
 <TABLE>	
+<TR> <TD> <center> Párametros en Horas </center> </TD> </TR> 
 <TR> <TD>Radiación (Global/Directa/Difusa)</TD> <TD> 
-<button id="radgddmin">Previsualizar</button></TD>   <TD>  <a href="/csv/minutos/Datos_radiacion_minutos.csv" download> descargar
+<button id="radgddhora">Previsualizar</button></TD>   <TD>  <a href="/csv/horas/Datos_radiacion_horas.csv" download> descargar
 </a></TD>  </TR>
-<TR> <TD>Temperatura </TD> <TD> <button id="tempmmmin">Previsualizar</button></TD> <TD> <a href="/csv/minutos/Datos_temperatura_minutos.csv" download> descargar
+<TR> <TD>Temperatura </TD> <TD> <button id="tempmmhora">Previsualizar</button></TD> <TD> <a href="/csv/horas/Datos_temperatura_horas.csv" download> descargar
 </a></TD>  </TR>
-<TR> <TD>BattV </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/BattV_min_minutos.csv" download> descargar
+<TR> <TD>Presión Absoluta </TD> <TD> <button id="presshora">Previsualizar</button></TD>   <TD> <a href="/csv/horas/Pressure_Avg_hora.csv" download> descargar
+</a> </TD>  </TR>
+<TR> <TD>Humedad Relativa </TD> <TD> <button id="HRhora">Previsualizar</button></TD>   <TD> <a href="/csv/horas/RH_horas.csv" download> descargar
 </a> </TD>  </TR>
 </TABLE>
 </p2> 
@@ -271,12 +435,15 @@ $(document).ready(function(){
 <center>
 <p3>
 <TABLE>	
+<TR> <TD> <center> Párametros en días </center> </TD> </TR> 
 <TR> <TD>Radiación (Global/Directa/Difusa)</TD> <TD> 
-<button id="radgddmin">Previsualizar</button></TD>   <TD>  <a href="/csv/minutos/Datos_radiacion_minutos.csv" download> descargar
+<button id="radgdddia">Previsualizar</button></TD>   <TD>  <a href="/csv/dias/Datos_radiacion_dias.csv" download> descargar
 </a></TD>  </TR>
-<TR> <TD>Temperatura </TD> <TD> <button id="tempmmmin">Previsualizar</button></TD> <TD> <a href="/csv/minutos/Datos_temperatura_minutos.csv" download> descargar
+<TR> <TD>Temperatura </TD> <TD> <button id="tempmmdia">Previsualizar</button></TD> <TD> <a href="/csv/dias/Datos_temperatura_dias.csv" download> descargar
 </a></TD>  </TR>
-<TR> <TD>BattV </TD> <TD> <button id="battvmin">Previsualizar</button></TD>   <TD> <a href="/csv/minutos/BattV_min_minutos.csv" download> descargar
+<TR> <TD>Presión Absoluta </TD> <TD> <button id="pressdia">Previsualizar</button></TD>   <TD> <a href="/csv/dias/Pressure_Avg_dias.csv" download> descargar
+</a> </TD>  </TR>
+<TR> <TD>Humedad Relativa </TD> <TD> <button id="HRdia">Previsualizar</button></TD>   <TD> <a href="/csv/dias/RH_dias.csv" download> descargar
 </a> </TD>  </TR>
 </TABLE>
 </p3> 
