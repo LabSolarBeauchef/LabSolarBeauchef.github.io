@@ -139,6 +139,92 @@
 
   </div>
   </div>
+  <div id="container" class="col s12 m4">  
+<body>
+<Script>
+$(document).ready(function(){
+    $("p1").show();
+    $("p2").hide();
+    $("p3").hide();
+    $("#button1").click(function(){
+        $("p1").show();
+        $("p2").hide();
+        $("p3").hide();
+    });
+    $("#button2").click(function(){
+        $("p1").hide();
+        $("p2").show();
+        $("p3").hide();
+    });
+    $("#button3").click(function(){
+        $("p1").hide();
+	$("p2").hide();
+        $("p3").show();
+    });
+    $("#radgddmin").click(function(){
+			$.get('./csv/minutos/Datos_radiacion_minutos.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Radiación'
+					},
+					yAxis: {
+						title: {
+							text: 'W/m^2'
+						}
+					}
+			    });
+			});
+    });
+    $("#tempmmmin").click(function(){
+			$.get('./csv/minutos/Datos_temperatura_minutos.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'Temperatura'
+					},
+					yAxis: {
+						title: {
+							text: 'Cº'
+						}
+					}
+			    });
+			});
+    });
+    $("#battvmin").click(function(){
+			$.get('./csv/minutos/BattV_min_minutos.csv', function(csv) {
+			    Highcharts.stockChart('container', {
+			        chart: {
+			        	type: 'line'
+			        },
+			        data: {
+			            csv: csv
+			        },
+			        title: {
+						text: 'BattV_min'
+					},
+					yAxis: {
+						title: {
+							text: 'V'
+						}
+					}
+			    });
+			});
+    });
+});
+</script>
+</body>
+</div>
   <!--div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
