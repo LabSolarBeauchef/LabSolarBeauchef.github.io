@@ -369,7 +369,7 @@ $(document).ready(function(){
 			});
     });
 	$("#HRdia").click(function(){
-			$.get('./csv/dias/123.xlsx', function(data) {
+			$.get('./csv/dias/RH_Avg_dias.csv', function(csv) {
 			    Highcharts.stockChart('container', {
 			        chart: {
 			        	type: 'line'
@@ -445,7 +445,7 @@ $(document).ready(function(){
 </a></TD>  </TR>
 <TR> <TD>Presión Absoluta </TD> <TD> <button id="pressdia">Previsualizar</button></TD>   <TD> <a href="/csv/dias/Pressure_Avg_dias.csv" download> descargar
 </a> </TD>  </TR>
-<TR> <TD>Humedad Relativa </TD> <TD> <button id="HRdia">Previsualizar</button></TD>   <TD> <a href="/csv/dias/RH_dias.csv" download> descargar
+<TR> <TD>Humedad Relativa </TD> <TD> <button id="HRdia">Previsualizar</button></TD>   <TD> <a href="/csv/dias/RH_Avg_dias.csv.csv" download> descargar
 </a> </TD>  </TR>
 </TABLE>
 </p3> 
